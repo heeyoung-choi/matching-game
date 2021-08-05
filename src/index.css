@@ -2,7 +2,6 @@
 *{
     font-family: 'Ubuntu', sans-serif;
     background-color: #222;
-    overflow: scroll;
 }
 #root {
     display: flex;
@@ -10,6 +9,7 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    overflow: scorll;
 }
 .board-row {
     display: flex;
