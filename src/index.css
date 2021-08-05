@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 *{
     font-family: 'Ubuntu', sans-serif;
+    background-color: #222;
+    overflow: scroll;
 }
 #root {
     display: flex;
@@ -17,19 +19,60 @@
     width: 100px;
     height: 100px;
     color: #eee;
-    background-color: #e46262;
+    background-color: #c82614;
     border: none;
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
 }
+.btn{
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+}
+.btn:hover{
+    transform: scale(1.09);
+}
+.btn:active{
+    transform: scale(0.94);
+}
 .finish{
-    background-color: #0dc519;
+    background-color: #9d4410;
+}
+.board{
+    background-color: inherit;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    margin: auto;
 }
 .info{
-    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
     position: relative;
     top: -50px;
+    background-color: #de8e17;
+    flex-direction: row;
+    /* margin-bottom: 50px; */
+}
+.info h2{
+    width: 150px;
+    color: #222;   
+    background-color: inherit;
+}
+.control-panel{
+    width: 430px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.btn.btn-control{
+    background-color:#386bb2 ;
+    color: #fff;
+    width: 100px;
 }
 .App{
     text-align: center;

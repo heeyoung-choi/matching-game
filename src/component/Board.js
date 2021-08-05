@@ -6,7 +6,7 @@ export default function Board(props) {
         
         <div className="board" style={{
             display: 'grid',
-            gridTemplateColumns: `repeat(${props.size}, 1fr)`,
+            gridTemplateColumns: `repeat(${props.size}, 100px)`,
             gridGap: '10px'
         }}>
             {[...Array(props.size**2).keys()].map(x => 
