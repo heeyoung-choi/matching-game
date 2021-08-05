@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/matching-game/static/css/main.0f72c22d.chunk.css",
-    "main.js": "/matching-game/static/js/main.5d69b0a4.chunk.js",
-    "main.js.map": "/matching-game/static/js/main.5d69b0a4.chunk.js.map",
+    "main.css": "/matching-game/static/css/main.663a3ece.chunk.css",
+    "main.js": "/matching-game/static/js/main.95948739.chunk.js",
+    "main.js.map": "/matching-game/static/js/main.95948739.chunk.js.map",
     "runtime-main.js": "/matching-game/static/js/runtime-main.29a979b1.js",
     "runtime-main.js.map": "/matching-game/static/js/runtime-main.29a979b1.js.map",
     "static/js/2.20343b11.chunk.js": "/matching-game/static/js/2.20343b11.chunk.js",
     "static/js/2.20343b11.chunk.js.map": "/matching-game/static/js/2.20343b11.chunk.js.map",
     "index.html": "/matching-game/index.html",
-    "static/css/main.0f72c22d.chunk.css.map": "/matching-game/static/css/main.0f72c22d.chunk.css.map",
+    "static/css/main.663a3ece.chunk.css.map": "/matching-game/static/css/main.663a3ece.chunk.css.map",
     "static/js/2.20343b11.chunk.js.LICENSE.txt": "/matching-game/static/js/2.20343b11.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.29a979b1.js",
     "static/js/2.20343b11.chunk.js",
-    "static/css/main.0f72c22d.chunk.css",
-    "static/js/main.5d69b0a4.chunk.js"
+    "static/css/main.663a3ece.chunk.css",
+    "static/js/main.95948739.chunk.js"
   ]
 }
