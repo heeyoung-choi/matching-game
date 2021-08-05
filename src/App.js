@@ -61,17 +61,17 @@ export class App extends Component {
   }
   restart(size)
   {
-    let temp = [...Array(this.state.size ** 2).fill(false)];
+    let temp = [...Array(size ** 2).fill(false)];
     // console.log(temp)
     let {face, data, finish} = Object.assign(this.state)
-    for (let i = 0; i < this.state.size ** 2 / 2; i++) {
+    for (let i = 0; i < size ** 2 / 2; i++) {
       let rd = this.getRandomInt(100);
       data.push(rd);
       data.push(rd);
     }
     this.shuffle(data);
     face = temp;
-    finish = Array(this.state.size ** 2).fill(false);
+    finish = Array(size ** 2).fill(false);
     this.setState({
       size: size,
       face: face,
@@ -87,7 +87,7 @@ export class App extends Component {
       <div className='App'>
         <div className='info'>
           <h2>Point: {this.state.point}</h2>
-          <h2>Turns taken:{this.state.turn}</h2>
+          <h2>Turns taken: {this.state.turn}</h2>
         </div>
         <div className="control-panel">
           <button 
