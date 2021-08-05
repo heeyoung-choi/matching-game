@@ -16,6 +16,20 @@
 .square{
     width: 100px;
     height: 100px;
+    color: #eee;
+    background-color: #e46262;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+.finish{
+    background-color: #0dc519;
+}
+.info{
+    margin-bottom: 50px;
+    position: relative;
+    top: -50px;
 }
 .App{
     text-align: center;

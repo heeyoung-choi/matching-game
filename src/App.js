@@ -6,12 +6,13 @@ export class App extends Component {
   {
     super(props)
     this.state = {
-      size : 3,
+      size : 4,
       face : Array(2),
       data:[],
       cur:[],
       finish: [],
-      point: 0
+      point: 0,
+      enableClick: true
     }
     let temp =  [...Array(this.state.size ** 2).fill(false)];
     // console.log(temp)
@@ -26,37 +27,17 @@ export class App extends Component {
     this.state.finish = Array(this.state.size ** 2).fill(false)
     
   }
-  detect(){
-    let {size, face, data, cur, finish, point} = this.state
-    console.log(cur)
-    if (cur.length === 2)
-    { 
-      
-      if (data[cur[0]] === data[cur[1]])
-      {
-        finish[cur[0]] = true
-        finish[cur[1]] = true
-        point++;
-        console.log("bug")
-      }
-      face = finish.slice()
-      cur = []
-    
-      setTimeout(this.setState({
-        size: size,
-        face: face,
-        data:data,
-        cur: cur,
-        finish: finish,
-        point:point
-      }), 1000)
-    }
-  }
+  
   handleClick(i)
   {
     if (this.state.finish[i])
     return;
+    if (!this.state.enableClick)
+    return;
     let cur = this.state.cur
+    let data = this.state.data
+    if (cur.includes(i))
+    return;
     let face = this.state.face
     cur = cur.concat(i)
     face[i] = !face[i]
@@ -64,7 +45,29 @@ export class App extends Component {
       cur: cur,
       face: face
     })
-    this.detect()
+    if (cur.length == 2)
+    {
+      this.setState({
+        enableClick: false
+      })
+      let finish = this.state.finish.slice()
+      let point = 0
+      if (data[cur[0]] === data[cur[1]])
+      {
+        point = 100
+        finish[cur[0]] = true
+        finish[cur[1]] = true
+      }
+      setTimeout(() => {
+        this.setState({
+          cur: [],
+          face: finish.slice(),
+          enableClick: true,
+          point: this.state.point + point,
+          finish: finish
+        })
+      }, 1000)
+    }
   }
   getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -73,15 +76,18 @@ export class App extends Component {
     array.sort(() => Math.random() - 0.5);
   }
   render() {
-    
     return (
       <div className="App">
+        
+        <div className="info">
         <h1>{this.state.point}</h1>
+        </div>
         <Board 
         size={this.state.size} 
         onClick ={(i) => this.handleClick(i)}
         face={this.state.face}
         list={this.state.data}
+        finish={this.state.finish}
         />
       </div>
     )
